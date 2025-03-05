@@ -20,3 +20,14 @@ function sum(a:number , b:number):number{
 }
 
 console.log(sum(10,15));
+
+//Create a function that takes another function as input, and runs it after 1 second.
+
+function delaycall(fn: ()=>void){
+    setTimeout(fn, 1000);
+}
+
+delaycall(function(){
+    console.log("hi there");
+    
+})
