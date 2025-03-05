@@ -12,3 +12,11 @@ function greet(firstName : String){
 }
 
 greet("Harshit")
+
+//A function that calculate the sum of two 
+
+function sum(a:number , b:number):number{
+    return a + b;
+}
+
+console.log(sum(10,15));
