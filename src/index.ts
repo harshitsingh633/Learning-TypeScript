@@ -46,3 +46,15 @@ function isLegal(user: User) {
     return false;
   }
 }
+
+interface Employee {
+    name : string,
+    department : string
+}
+
+interface Manager {
+    name : string,
+    age : number
+}
+
+type TeamLead = Employee & Manager
