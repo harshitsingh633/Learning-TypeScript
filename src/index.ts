@@ -58,3 +58,46 @@ interface Manager {
 }
 
 type TeamLead = Employee & Manager
+
+
+interface People{
+  name: string,
+  age : number,
+  greet: () => string
+}
+
+const person : People = {
+  name: "Harshit",
+  age: 18,
+  greet:()=>{
+    return "hi"
+  }
+}
+
+let greeting = person.greet()
+console.log(greeting)
+
+
+//Class that implements interface
+
+interface User{
+  name : string;
+  age : string;
+  isLegal(): boolean;
+}
+
+class Manager implements User{
+    name : string;
+    age: number;
+
+    constructor(name: string, age : number){
+      this.age = age;
+      this.name = name;
+    }
+    isLegal(): boolean {
+        return this.age > 18
+    }
+}
+
+const m = new Manager("Harshit",21);
+console.log(m.isLegal())
