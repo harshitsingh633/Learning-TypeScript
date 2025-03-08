@@ -111,10 +111,17 @@ interface Admin {
 
 interface User {
   name: string;
-  age: string;
+  lastname : string;
+  age: number;
 }
 
 type UserOrAdmin = User | Admin;
 function greet(user: UserOrAdmin) {
   console.log("Welcome" + user.name);
+}
+
+
+// Given Interface user try to create an array of users as inputs and return the legal users(age > 18)
+function filterUser( user : User[]){
+  return user.filter((user) => user.age > 18);
 }
