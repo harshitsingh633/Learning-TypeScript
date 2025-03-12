@@ -144,3 +144,10 @@ type UpdateProps = Pick <User, "name" | "age" | "email">
 const displayUserProfile = (user : UpdateProps) => {
     console.log(`Name: ${user.name}, Email: ${user.email}, Age : ${user.age}`);
 }
+
+type UpdatePropsOptional = Partial<UpdateProps>
+
+function updateUser(updatedProps: UpdatePropsOptional){
+  // hit the database tp update the user
+}
+updateUser({});
