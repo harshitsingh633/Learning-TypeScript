@@ -151,3 +151,17 @@ function updateUser(updatedProps: UpdatePropsOptional){
   // hit the database tp update the user
 }
 updateUser({});
+
+
+//ReadOnly
+interface Config{
+  readonly endpoint : string;
+  readonly apikey : string;
+}
+
+const config : Readonly<Config> = {
+  endpoint : 'https://api.example.com',
+  apikey : "abcde123456"
+}
+
+// config.apiKey = 'newKey'; // Error: Cannot assign to 'apikey' because it is a read-only Property
