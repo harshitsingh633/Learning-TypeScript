@@ -165,3 +165,11 @@ const config : Readonly<Config> = {
 }
 
 // config.apiKey = 'newKey'; // Error: Cannot assign to 'apikey' because it is a read-only Property
+
+//Record 
+
+type Users = Record<string , number>;
+const users : Users = {
+  "ras@123" : 1,
+  "ras@321" : 20
+}
